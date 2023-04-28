@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -11,11 +11,11 @@ import "./scss/app.scss";
 export const SearchContext = createContext(null);
 
 function App() {
-	const [searchValue, setSearchValue] = useState('');
+	const [searchValue, setSearchValue] = useState("");
 
 	return (
 		<div className="wrapper">
-			<SearchContext.Provider value={{searchValue, setSearchValue}}>
+			<SearchContext.Provider value={{ searchValue, setSearchValue }}>
 				<Header/>
 				<div className="content">
 					<Routes>
