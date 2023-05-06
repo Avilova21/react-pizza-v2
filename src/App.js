@@ -1,21 +1,15 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
+import React from "react";
 import Home from "./pages/Home";
+import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
 import { Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart"
-import { createContext } from "react";
 
 import "./scss/app.scss";
 
-export const SearchContext = createContext(null);
-
 function App() {
-	const [searchValue, setSearchValue] = useState("");
-
 	return (
 		<div className="wrapper">
-			<SearchContext.Provider value={{ searchValue, setSearchValue }}>
 				<Header/>
 				<div className="content">
 					<Routes>
@@ -24,7 +18,6 @@ function App() {
 						<Route path="*" element={<NotFound/>}/>
 					</Routes>
 				</div>
-			</SearchContext.Provider>
 		</div>
 	);
 }
