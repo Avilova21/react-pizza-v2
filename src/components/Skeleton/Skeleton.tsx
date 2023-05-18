@@ -8,7 +8,7 @@ import ContentLoaded from 'react-content-loader'
 		 width={280}
 		 height={500}
 		 viewBox="0 0 280 500"
-		 backgraundColor="#f3f3f3"
+		 backgroundColor="#f3f3f3"
 		 foregroundColor="#ecebeb"
 		 >
 		 <circle cx="134" cy="136" r="125"/>
