@@ -22,7 +22,7 @@ export const sortList: SortItem[] = [
   { name: 'алфавиту (ASC)', sortProperty: SortPropertyEnum.TITLE_ASC },
 ];
 
-const SortPopup: React.FC<SortPopupProps> = memo(({ value }) => {
+export const SortPopup: React.FC<SortPopupProps> = memo(({ value }) => {
   const dispatch = useDispatch();
   const sortRef = useRef<HTMLDivElement>(null);
 
@@ -67,4 +67,4 @@ const SortPopup: React.FC<SortPopupProps> = memo(({ value }) => {
   );
 })
 
-export default SortPopup
+
